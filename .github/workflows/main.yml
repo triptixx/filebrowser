@@ -1,0 +1,30 @@
+name: docker build
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  flood:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone
+        uses: actions/checkout@master
+      - name: build
+        uses: triptixx/action-docker-build@master
+        with:
+          repo: filebrowser-dev
+      - name: test
+        uses: triptixx/action-docker-test@master
+        with:
+          verbose: true
+          repo: filebrowser-dev
+          curl: :8080
+      - name: publish
+        uses: triptixx/action-docker-publish@master
+        with:
+          docker_username: ${{ secrets.docker_username }}
+          docker_password: ${{ secrets.docker_password }}
+          from: filebrowser-dev
+          repo: ${{ secrets.docker_username }}/filebrowser
+          tags: latest,%label org.label-schema.version | %auto

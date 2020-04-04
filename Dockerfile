@@ -55,8 +55,8 @@ VOLUME ["/data"]
 
 EXPOSE 8080/TCP
 
-#HEALTHCHECK --start-period=10s --timeout=5s \
-#    CMD wget -qO /dev/null "http://localhost:8080/login"
+HEALTHCHECK --start-period=10s --timeout=5s \
+    CMD wget -qO /dev/null "http://localhost:8080/login"
 
 ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/entrypoint.sh"]
 CMD ["/filebrowser/filebrowser", "-c", "/config/filebrowser.json"]
