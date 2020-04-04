@@ -21,6 +21,7 @@ docker run -d \
     -p 8080:8080 \
     -e ROOT_DIR=/srv \
     -v $PWD/data:/data \
+    -v $PWD/srv:/srv \
     loxoo/filebrowser
 ```
 
