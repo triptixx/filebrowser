@@ -1,5 +1,5 @@
 ARG ALPINE_TAG=3.12
-ARG FILEBROWSER_VER=2.8.0
+ARG FILEBROWSER_VER=2.11.0
 
 FROM node:alpine AS builder_frontend
 
