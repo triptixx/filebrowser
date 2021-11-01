@@ -4,6 +4,7 @@ ARG FILEBROWSER_VER=2.18.0
 FROM node:alpine AS builder_frontend
 
 ARG FILEBROWSER_VER
+ENV NODE_OPTIONS=--openssl-legacy-provider
 
 ### install frontend
 WORKDIR /frontend-src
@@ -24,7 +25,7 @@ COPY --from=builder_frontend /frontend-src/ /backend-src/
 ### install backend
 WORKDIR /backend-src
 RUN apk add --no-cache git upx; \
-    go get github.com/GeertJohan/go.rice/rice; \
+    go install github.com/GeertJohan/go.rice/rice@latest; \
     go mod download; \
     cd http; \
     rice embed-go; \
