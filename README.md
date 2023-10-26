@@ -1,15 +1,14 @@
 [hub]: https://hub.docker.com/r/loxoo/filebrowser
-[mbdg]: https://microbadger.com/images/loxoo/filebrowser
-[git]: https://github.com/triptixx/filebrowser
-[actions]: https://github.com/triptixx/filebrowser/actions
+[git]: https://github.com/triptixx/filebrowser/tree/master
+[actions]: https://github.com/triptixx/filebrowser/actions/workflows/main.yml
 
 # [loxoo/filebrowser][hub]
-[![Layers](https://images.microbadger.com/badges/image/loxoo/filebrowser.svg)][mbdg]
-[![Latest Version](https://images.microbadger.com/badges/version/loxoo/filebrowser.svg)][hub]
-[![Git Commit](https://images.microbadger.com/badges/commit/loxoo/filebrowser.svg)][git]
+[![Git Commit](https://img.shields.io/github/last-commit/triptixx/filebrowser/master)][git]
+[![Build Status](https://github.com/triptixx/filebrowser/actions/workflows/main.yml/badge.svg?branch=master)][actions]
+[![Latest Version](https://img.shields.io/docker/v/loxoo/filebrowser/latest)][hub]
+[![Size](https://img.shields.io/docker/image-size/loxoo/filebrowser/latest)][hub]
 [![Docker Stars](https://img.shields.io/docker/stars/loxoo/filebrowser.svg)][hub]
 [![Docker Pulls](https://img.shields.io/docker/pulls/loxoo/filebrowser.svg)][hub]
-[![Build Status](https://github.com/triptixx/filebrowser/workflows/docker%20build/badge.svg)][actions]
 
 ## Usage
 
