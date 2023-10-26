@@ -9,7 +9,8 @@ ENV NODE_OPTIONS=--openssl-legacy-provider
 ### install frontend
 WORKDIR /frontend-src
 RUN apk add --no-cache git; \
-    git clone https://github.com/filebrowser/filebrowser.git --branch v${FILEBROWSER_VER} --depth 1 .; \
+    # git clone https://github.com/filebrowser/filebrowser.git --branch v${FILEBROWSER_VER} --depth 1 .; \
+    git clone https://github.com/filebrowser/filebrowser.git --branch master --depth 1 .; \
     cd frontend; \
     npm install; \
     npm run build; \
