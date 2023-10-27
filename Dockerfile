@@ -42,7 +42,7 @@ RUN chmod +x /output/usr/local/bin/*.sh
 FROM loxoo/alpine:${ALPINE_TAG}
 
 ARG FILEBROWSER_VER
-ENV SUID=953 SGID=900
+ENV SUID=952 SGID=900
 
 LABEL org.label-schema.name="filebrowser" \
       org.label-schema.description="A Docker image for Web File Browser app" \

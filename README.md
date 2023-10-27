@@ -26,7 +26,7 @@ docker run -d \
 
 ## Environment
 
-- `$SUID`                - User ID to run as. _default: `953`_
+- `$SUID`                - User ID to run as. _default: `952`_
 - `$SGID`                - Group ID to run as. _default: `900`_
 - `$ROOT_DIR`            - Root to prepend to relative paths. _default: `.`_
 - `$TZ`                  - Timezone. _optional_
