@@ -28,3 +28,10 @@ jobs:
           from: filebrowser-dev
           repo: ${{ secrets.docker_username }}/filebrowser
           tags: latest,%label org.label-schema.version | %auto
+      - name: docker-scout
+        uses: docker/scout-action@v1
+        with:
+          dockerhub-user: ${{ secrets.docker_username }}
+          dockerhub-password: ${{ secrets.docker_password }}
+          command: cves
+          image: ${{ secrets.docker_username }}/filebrowser:latest
